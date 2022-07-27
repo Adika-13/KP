@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'transcribe.apps.TranscribeConfig',
     'grade.apps.GradeConfig',
     'django_extensions',
+    'message.apps.MessageConfig'
 ]
 
 MIDDLEWARE = [
