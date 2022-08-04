@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'grade.apps.GradeConfig',
     'django_extensions',
     'message.apps.MessageConfig'
+    'active_link',
+    'TC'
 ]
 
 MIDDLEWARE = [
