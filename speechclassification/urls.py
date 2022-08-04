@@ -19,6 +19,8 @@ from django.urls import include
 from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
+import os
+from TC.views import *
 
 urlpatterns = [
     path('', RedirectView.as_view(url='/dashboard'), name='home'),
@@ -28,6 +30,12 @@ urlpatterns = [
     path('transcribe/', include('transcribe.urls')),
     path('tugas2/', include('tugas2.urls')),
     path('message/', include('message.urls')),
+    path('TC/', include('TC.urls')),
+    path('preprocessing/', preprocessing, name='preprocessing'),
+    path('checker_page/', checker_page, name='checker_page'),
+    path('chooseMethod/', chooseMethod, name='chooseMethod'),
+    path('classification/', classification, name='classification'),
+    path('clustering/', clustering, name='clustering'),
     path('admin/', admin.site.urls),   
 ]
 
